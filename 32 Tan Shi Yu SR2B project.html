@@ -1,0 +1,272 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore Info</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+   background: linear-gradient(120deg, #fff4f4, #ffeaea, #ffffff);
+}
+
+/* Title */
+h2 {
+  margin-top: 20px;
+}
+
+/* Tabs container */
+.tab {
+  overflow: hidden;
+  border-bottom: 2px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Tab buttons */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+  font-weight: bold;
+}
+
+/* Tab content */
+.tabcontent {
+  display: none;
+  padding: 20px;
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.tabcontent h1 {
+  text-align: center;
+}
+
+/* Gallery */
+.gallery {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(to right, #d32f2f, #ffffff);
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  animation: slideDown 0.6s ease-out;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.flag {
+  font-size: 32px;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+</style>
+</head>
+<button onclick="topFunction()" id="topBtn" 
+        style="display:none;position:fixed;bottom:20px;right:20px;background:#d32f2f;color:white;padding:10px;border:none;border-radius:5px;cursor:pointer;">
+    ↑ Top
+</button>
+<script>
+let topBtn = document.getElementById("topBtn");
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};
+function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
+}
+</script>
+<body>
+
+<body style="text-align:center;">
+<header>
+  <div class="header-content">
+    <span class="flag">🇸🇬</span>
+    <h1>Singapore Information</h1>
+  </div>
+</header>
+
+<h2>Singapore</h2>
+<img src="sgone.png" style="width:200; height:auto;">
+<p>Singapore,officially the Republic of Singapore, is an island country and city-state in Southeast Asia. The country's territory comprises one main island, 63 satellite islands and islets, and one outlying islet. It is about one degree of latitude (137 kilometres or 85 miles) north of the equator, off the southern tip of the Malay Peninsula, bordering the Strait of Malacca to the west, the Singapore Strait to the south along with the Riau Islands in Indonesia, the South China Sea to the east, and the Straits of Johor along with the State of Johor in Malaysia to the north.</p>
+<p>Its visionary, meritocratic government has leveraged long-term strategic planning to create one of the world’s most business‑friendly, digitally advanced economies—anchored by world-class financial institutions, Changi Airport, and the Port of Singapore—while its ultra-efficient urban design integrates verdant green spaces such as Gardens by the Bay into daily life, all underpinned by a social harmony nurtured through proactive housing, education, and multicultural policies.</p>
+
+<p>By embedding sustainability at the heart of its urban fabric—showcased through innovative landmarks like Gardens by the Bay with its Supertrees, energy-efficient domes, rainwater harvesting systems, and solar-powered features—Singapore underscores that environmental stewardship and urban vibrancy are not mutually exclusive, while its robust social architecture, from ethnically integrated public housing and merit-based education to strengthened constitutional safeguards and multicultural engagement, ensures that progress remains inclusive and cohesive.
+</p>
+
+<!-- Gallery -->
+<div class="gallery">
+  <img src="sg.jpg" alt="Singapore">
+  <img src="sgtwo.jpg" alt="Singapore">
+  <img src="sgthree.jpg" alt="Singapore">
+  <img src="sgfour.jpg" alt="Singapore">
+  <img src="sgfive.jpg" alt="Singapore">
+  <img src="sgsix.jpg" alt="Singapore">
+
+</div>
+<!-- Tabs -->
+<div class="tab">
+<input type="text" id="searchBox" placeholder="Search topics..." 
+       style="width: 100%; padding: 8px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;">
+  <button class="tablinks" onclick="openTab(event, 'his')" id="defaultOpen">History</button>
+  <button class="tablinks" onclick="openTab(event, 'trans')">Transportation</button>
+  <button class="tablinks" onclick="openTab(event, 'edu')">Education</button>
+  <button class="tablinks" onclick="openTab(event, 'he')">Healthcare</button>
+  <button class="tablinks" onclick="openTab(event, 'cul')">Culture</button>
+  <button class="tablinks" onclick="openTab(event, 'geo')">Geography</button>
+</div>
+
+<!-- Tab Contents -->
+<div id="his" class="tabcontent">
+  <h1>History</h1>
+  <p>Singapore was originally known as Temasek in the 14th century and functioned as a small but significant trading post under regional powers such as the Srivijaya and Majapahit empires, benefiting from its strategic location along vital maritime trade routes. In 1819, Sir Stamford Raffles of the British East India Company established a British trading post on the island, turning it into a thriving free port that attracted merchants, migrants, and workers from China, India, the Malay Archipelago, and beyond, creating a culturally diverse population. During World War II, Singapore was invaded by Japanese forces in February 1942, marking the beginning of a harsh occupation during which it was renamed Syonan-to (“Light of the South”) and its people suffered from shortages, violence, and oppression until the Japanese surrender in 1945. After the war, Singapore returned to British colonial rule but political movements for self-determination gained momentum, leading to the achievement of self-government in 1959 under Prime Minister Lee Kuan Yew. In 1963, Singapore joined the Federation of Malaysia, but political and ethnic tensions soon led to its separation, and on 9 August 1965, Singapore became an independent republic. In the decades that followed, the government pursued rapid industrialisation, economic diversification, and social reforms, transforming Singapore from a developing port city into one of the world’s most prosperous, modern, and globally connected nations.</p>
+<div class="carousel">
+    <img src="sghistory.jpg" style="width:100%">
+    <img src="sghistoryone.jpg" style="width:100%;display:none">
+    <img src="sghistorytwo.jpg" style="width:100%;display:none">
+</div>
+
+<script>
+let index = 0;
+function showSlides() {
+    let slides = document.querySelectorAll('.carousel img');
+    slides.forEach(slide => slide.style.display = 'none');
+    index++;
+    if (index > slides.length) { index = 1 }
+    slides[index-1].style.display = 'block';
+    setTimeout(showSlides, 3000);
+}
+showSlides();
+</script>
+
+</div>
+
+<div id="trans" class="tabcontent">
+  <h1>Transportation</h1>
+  <p>Singapore has a highly efficient and well-integrated transportation network that combines public transport, private vehicles, and active mobility options. The Mass Rapid Transit (MRT) system forms the backbone of public transport, with an extensive network of underground and elevated trains connecting most parts of the island quickly and affordably. Complementing the MRT are public buses, which cover routes that trains do not reach and are coordinated under a unified payment system using contactless cards and mobile apps. Taxis and ride-hailing services like Grab provide flexible door-to-door transport, though they are more expensive than trains and buses. For private car ownership, the government uses a Certificate of Entitlement (COE) system to control the number of vehicles and manage road congestion, supported by Electronic Road Pricing (ERP) charges during peak hours. Singapore also encourages cycling and walking through dedicated paths, park connectors, and bicycle-sharing schemes, while long-distance travel is facilitated by Changi Airport, one of the world’s busiest and most awarded airports, and the island’s international ferry and port services. This integrated system ensures that residents and visitors can travel around the city quickly, safely, and sustainably.</p>
+</div>
+
+<div id="edu" class="tabcontent">
+  <h1>Education</h1>
+  <p>Singapore has a highly regarded education system known for its rigorous academic standards, bilingual policy, and emphasis on holistic development. Children typically begin with pre-school education at the age of four to six, followed by six years of primary school, where they study core subjects such as English, their designated Mother Tongue language (Chinese, Malay, or Tamil), Mathematics, and Science, alongside moral and physical education. After the Primary School Leaving Examination (PSLE), students move on to secondary education, which may follow the Express, Normal (Academic), or Normal (Technical) stream depending on their results, with a curriculum that prepares them for the GCE O-Level or N-Level examinations. Post-secondary pathways include junior colleges, polytechnics, the Institute of Technical Education (ITE), and other specialised institutions, allowing students to pursue academic, vocational, or technical training. Higher education is offered by world-class universities such as the National University of Singapore (NUS) and Nanyang Technological University (NTU), as well as specialised institutions like the Singapore University of Technology and Design (SUTD). The government also promotes lifelong learning through initiatives like SkillsFuture, encouraging citizens to continually upgrade their skills in a fast-changing economy. This combination of academic excellence, strong governance, and adaptability has made Singapore’s education system one of the most respected in the world.
+</p>
+</div>
+
+<div id="he" class="tabcontent">
+  <h1>Healthcare</h1>
+  <p>Singapore has a highly efficient, accessible, and world-class healthcare system that combines strong public health infrastructure with regulated private services. The government operates a network of public hospitals and polyclinics that provide affordable medical care, while private hospitals and clinics offer additional options for those seeking shorter waiting times or specialised services. Healthcare financing is based on a unique "3M" framework—MediSave, a compulsory medical savings scheme; MediShield Life, a universal basic health insurance plan; and MediFund, a government endowment fund that helps needy citizens cover medical costs. This structure ensures that patients share responsibility for their healthcare expenses while keeping the system sustainable. Singapore is also known for its advanced medical technology, skilled professionals, and high clinical standards, attracting medical tourists from around the region. Public health campaigns promote healthy lifestyles, vaccinations, and preventive screenings to reduce the burden of disease. Overall, Singapore’s healthcare model balances quality, affordability, and sustainability, consistently ranking among the best in the world for outcomes and efficiency.
+</p>
+</div>
+
+<div id="cul" class="tabcontent">
+  <h1>Culture</h1>
+  <p>Singapore’s culture is a vibrant blend of Chinese, Malay, Indian, and Western influences, shaped by its history as a multicultural trading port. This diversity is reflected in its languages, with English serving as the main working language, while Mandarin, Malay, and Tamil are official languages that preserve cultural heritage. The nation’s food culture is world-famous, offering a mix of hawker centre favourites such as chicken rice, satay, laksa, and roti prata, alongside fine dining experiences. Festivals from different communities—such as Chinese New Year, Hari Raya Aidilfitri, Deepavali, and Christmas—are celebrated with equal enthusiasm, fostering mutual respect and understanding. Traditional arts like Chinese opera, Malay dance, and Indian classical music coexist with modern forms such as theatre, street art, and contemporary music. Singaporeans also value social harmony, which is reinforced through government policies like ethnic integration in public housing and bilingual education. The result is a uniquely harmonious and cosmopolitan society where different traditions are preserved, adapted, and celebrated together.
+
+</p>
+</div>
+
+<div id="geo" class="tabcontent">
+  <h1>Geography</h1>
+  <p>Singapore is a small island nation located in Southeast Asia, situated at the southern tip of the Malay Peninsula, about one degree north of the equator. It consists of one main island and about 64 smaller islands and islets, many of which are uninhabited or used for specific purposes such as recreation, industry, or military training. The country is bordered by the Strait of Malacca to the west, the Singapore Strait to the south, the South China Sea to the east, and the Straits of Johor to the north, which separate it from Malaysia. Despite its compact size—measuring roughly 50 kilometres east to west and 27 kilometres north to south—Singapore has a variety of landscapes, including urban cityscapes, coastal beaches, parks, and nature reserves like the Bukit Timah Nature Reserve. Its location along major shipping routes has made it one of the world’s busiest ports, while land reclamation projects have expanded its territory to support urban development, industry, and green spaces.
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.261!2d103.819836!3d1.352083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1749f282b5c5%3A0xf8ef23d13c83b5b6!2sSingapore!5e0!3m2!1sen!2ssg!4v1234567890" 
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+</p>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Open default tab on load
+document.getElementById("defaultOpen").click();
+</script>
+<footer style="text-align:center; padding: 10px; background-color: #d32f2f; color: white;">
+    &copy; 2025 Singapore Information Page
+</footer>
+<script>
+document.getElementById('searchBox').addEventListener('keyup', function() {
+    let searchValue = this.value.toLowerCase();
+    let sections = document.querySelectorAll('.tabcontent');
+    sections.forEach(section => {
+        section.style.display = section.textContent.toLowerCase().includes(searchValue) ? "block" : "none";
+    });
+});
+</script>
+</body>
+</html>
